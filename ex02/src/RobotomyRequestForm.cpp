@@ -1,5 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
+RobotomyRequestForm::RobotomyRequestForm()
+    : AForm("Default Robot", 72, 45), target("Unlucky one")
+{
+    std::cout << "RobotomyRequestForm default constructor called" << std::endl;
+}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
     : AForm("RobotomyRequestForm", 72, 45), target(target)
 {
@@ -8,7 +14,7 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-    std::cout << "RobotomyRequestForm destructor called" << std::endl;
+    std::cout << target <<" robo surgeon destructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &o)
@@ -30,7 +36,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 void RobotomyRequestForm::execute(const Bureaucrat &executor) const
 {
-    if (getSignGrade())
+    if (!getIsSigned())
     {
         throw FormNotSignedException();
     }

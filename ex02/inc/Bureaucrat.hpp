@@ -5,7 +5,7 @@
 #include <exception>
 #include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -25,7 +25,7 @@ class Bureaucrat
 		void incrementGrade(); // -1
 		void decrementGrade(); // +1
 
-		void signForm(Form &form) const;
+		void signForm(AForm &form) const;
 
 		class GradeTooHighException : public std::exception
 		{

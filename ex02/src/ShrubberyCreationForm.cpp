@@ -28,7 +28,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
-    if (getSignGrade())
+    if (!getIsSigned())
     {
         throw FormNotSignedException();
     }
@@ -37,4 +37,24 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
         throw GradeTooLowException();
     }
     std::cout << "Creating shrubbery at " << target << std::endl;
+    
+    std::ofstream file((target + "_shrubbery").c_str());
+    if (!file)
+    {
+        std::cerr << "Error creating file" << std::endl;
+        return;
+    }
+    file << "              v .   ._, |_  .,\n"
+          "           `-._\\/  .  \\ /    |/_\n"
+          "               \\  _\\, y | \\//\n"
+          "         _\\_.___\\, \\/ -.\\||\n"
+          "           `7-,--.`._||  / / ,\n"
+          "           /'     `-. `./ / |/_.\n"
+          "                     |    |//\n"
+          "                     |_    /\n"
+          "                     |-   |\n"
+          "                     |   =|\n"
+          "                     |    |\n"
+          "--------------------/ ,  . \\--------._" << std::endl;
+    file.close();
 }

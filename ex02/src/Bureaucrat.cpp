@@ -11,7 +11,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << name << "constructor called" << std::endl;
+	std::cout << name << " constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -58,7 +58,7 @@ void Bureaucrat::decrementGrade()
 	this->_grade++;
 }
 
-void Bureaucrat::signForm(Form &form) const
+void Bureaucrat::signForm(AForm &form) const
 {
 	try
 	{

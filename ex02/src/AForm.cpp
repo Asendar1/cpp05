@@ -11,7 +11,7 @@ AForm::AForm(std::string name, int signGrade, int executeGrade) : name(name), is
 		throw GradeTooHighException();
 	if (signGrade > 150 || executeGrade > 150)
 		throw GradeTooLowException();
-	std::cout << name << "constructor called" << std::endl;
+	std::cout << name << " constructor called" << std::endl;
 }
 
 AForm::~AForm()

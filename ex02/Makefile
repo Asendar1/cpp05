@@ -1,4 +1,4 @@
-SRC = main.cpp Bureaucrat.cpp AForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 SRC_FILES = $(addprefix src/, $(SRC))
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
