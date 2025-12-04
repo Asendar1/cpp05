@@ -9,7 +9,7 @@
 int main()
 {
     srand(time(0));
-    
+
     Bureaucrat boss("Boss", 1);
     RobotomyRequestForm robo("abo alshabab");
     robo.beSigned(boss);
@@ -28,7 +28,7 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
+
     std::cout << "-------------------" << std::endl;
     std::cout << "-------------------" << std::endl;
 
@@ -57,7 +57,7 @@ int main()
         std::cerr << e.what() << '\n';
     }
 
-    std::cout << "A* createRobo(const-------------------" << std::endl;
+    std::cout << "-------------------" << std::endl;
     std::cout << "-------------------" << std::endl;
     PresidentialPardonForm pres("criminal");
     try
@@ -69,7 +69,7 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
+
     try
     {
         intern.signForm(pres);
@@ -78,11 +78,15 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    std::cout << "-------------------" << std::endl;
+    std::cout << "-------------------" << std::endl;
 
     Intern jackie;
     AForm *robo3;
     robo3 = jackie.makeForm("RobotomyRequestForm", "bashbosh");
 
+    std::cout << "-------------------" << std::endl;
+    std::cout << "-------------------" << std::endl;
     delete robo3;
     return 0;
 }
