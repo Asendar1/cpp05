@@ -12,6 +12,13 @@ int main()
 
 	std::cout << b << std::endl;
 
+	try {
+		Bureaucrat high("charlie", 0);
+	}
+	catch(const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	try
 	{
 		b.incrementGrade();
