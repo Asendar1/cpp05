@@ -11,22 +11,22 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	std::cout << name << "constructor called" << std::endl;
+	std::cout << name << " constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat Destructor called" << std::endl;
+	std::cout << " Bureaucrat Destructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &o): _name(o._name), _grade(o._grade)
 {
-	std::cout << "Bureaucrat Copy constructor called" << std::endl;
+	std::cout << " Bureaucrat Copy constructor called" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &o)
 {
-	std::cout << "Bureaucrat Copy assignment operator called" << std::endl;
+	std::cout << " Bureaucrat Copy assignment operator called" << std::endl;
 	if (this != &o)
 	{
 		this->_grade = o._grade;

@@ -3,13 +3,16 @@
 int main()
 {
 	Bureaucrat a;
-	Bureaucrat b("bob", 1);
-	Bureaucrat c(b);
-	Bureaucrat d;
-	d = b;
 
+	try {
+		Bureaucrat b("bob", 0);
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	Bureaucrat b("charlie", 2);
 	std::cout << b << std::endl;
-
 	try
 	{
 		b.incrementGrade();
