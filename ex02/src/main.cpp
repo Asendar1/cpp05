@@ -8,7 +8,7 @@
 int main()
 {
     srand(time(0));
-    
+
     Bureaucrat boss("Boss", 1);
     RobotomyRequestForm robo("abo alshabab");
     robo.beSigned(boss);
@@ -27,7 +27,7 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
+
     std::cout << "-------------------" << std::endl;
     std::cout << "-------------------" << std::endl;
 
@@ -58,6 +58,9 @@ int main()
 
     std::cout << "-------------------" << std::endl;
     std::cout << "-------------------" << std::endl;
+    std::cout << "-------------------" << std::endl;
+    std::cout << "-------Intern------" << std::endl;
+    std::cout << "-------------------" << std::endl;
     PresidentialPardonForm pres("criminal");
     try
     {
@@ -68,7 +71,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
     try
     {
         intern.signForm(pres);
@@ -77,6 +79,7 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
+    std::cout << "-------------------" << std::endl;
+    std::cout << "-------------------" << std::endl;
     return 0;
 }
